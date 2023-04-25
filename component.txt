@@ -1,0 +1,6 @@
+ESAPI
+Jinja2
+PyJWT
+Werkzeug
+activesupport
+addressable
