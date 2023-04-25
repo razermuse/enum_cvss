@@ -11,18 +11,6 @@ This Python script reads a list of components from a file, line by line and then
  
 ### Usage
 
-usage:
-
-#
-#
-#     _____ ____  _   _ ____          ____ _   _ ___  ___
-#    | ___ |  _ \| | | |    \        / ___) | | /___)/___)
-#    | ____| | | | |_| | | | |______( (___ \ V /___ |___ |
-#    |_____)_| |_|____/|_|_|_(_______)____) \_/(___/(___/
-#
-#
-#
-
 enum_cvss_v5.py {component name}
     Find cvss2 and cvss3 base scores for a given component.
 
