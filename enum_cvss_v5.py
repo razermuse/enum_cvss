@@ -303,5 +303,5 @@ if __name__ == '__main__':
         user_info()
         get_components()
     except KeyboardInterrupt:
-        print("[Control-C detected]")
+        print(f"\033[0;37;40m" + "\n[Control-C detected]\n")
         sys.exit()
