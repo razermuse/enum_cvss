@@ -11,14 +11,14 @@ This Python script reads a list of components from a file, line by line and then
  
 ### Usage
 
-enum_cvss_v5.py {component name}
+enum_cvss_v5.py
     Find cvss2 and cvss3 base scores for a given component.
 
 Explanation:
     This script pulls component data from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores.
 
 Positional arguments:
-    At the moment - none.
+    At the moment - none but it does require a list of component names to iterate through.
 
 Optional arguments:
     Common Options:
