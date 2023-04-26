@@ -27,20 +27,21 @@ def get_usage():
 #
 
 
-%s {component name}
+%s
     Find cvss2 and cvss3 base scores for a given component.
 
 Explanation:
-    This script pulls component data from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores.
+    This script pulls component data via a list from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores. Errors are logged to enum_cvss.log.
 
 Positional arguments:
-    At the moment - none.
+    At the moment - none but it does require a list of component names to iterate through.
 
 Optional arguments:
     Common Options:
     -h        --help    Print this help message
-    -i        --info    Print authentication information
+    -i        --info    Print authentication information in addition to CVSS data
     -q        --quiet   Quiet mode
+    -s        --save    Save output to 'enum_output.csv'
     -v        --version Version of this program
     -vv       --verbose Verbosity of output
 
@@ -54,14 +55,14 @@ def init_argparse() -> argparse.ArgumentParser:
     parser.add_argument('-i', '--info', help='Display authentication information', action='store_true')
     parser.add_argument('-q', '--quiet', help='Quiet mode', action='store_true')
     parser.add_argument('-s', '--save', help='Display authentication information', action='store_true')
-    parser.add_argument('-v', '--version', action='version', version='%(prog)s 4.0', help='Version.')
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s 5.0', help='Version.')
     parser.add_argument('-vv', '--verbose', help='Display more data about the components', action='store_true')
     return parser
 
 # Global variables
 BASEURL="https://poc09.blackduck.synopsys.com"
 AUTHURL="%s/api/tokens/authenticate" % (BASEURL)
-api_token="[REDACTED]"
+api_token="NDc1NGNkNDEtZThlNS00YzZlLTkwZGMtOTU3N2YxN2NiZDk1OmQxMzY4MDVkLTNiZjctNGFlNC04MWI5LTU3YzIwNjc3M2ZiYw=="
 today_date = datetime.now()
 date_time = today_date.strftime('%Y-%m-%d %H:%M')
 http_method="GET"
