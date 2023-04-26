@@ -15,7 +15,7 @@ enum_cvss_v5.py
     Find cvss2 and cvss3 base scores for a given component.
 
 Explanation:
-    This script pulls component data from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores.
+    This script pulls component data from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores. Errors are logged to 'enum_cvss.log'. 
 
 Positional arguments:
     At the moment - none but it does require a list of component names to iterate through.
@@ -23,10 +23,11 @@ Positional arguments:
 Optional arguments:
     Common Options:
     -h        --help    Print this help message
-    -i        --info    Print authentication information
+    -i        --info    Print authentication information in addition to CVSS data
     -q        --quiet   Quiet mode
+    -s        --save    Save output to 'enum_output.csv' (component name, vulnerability ID, CVSS 2 and CVSS 3 scores)
     -v        --version Version of this program
-    -vv       --verbose Verbosity of output
+    -vv       --verbose Verbosity of output (includes a vulnerability description, CWE, etc) 
 
 Examples:
     python3 enum_cvss.py
