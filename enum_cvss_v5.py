@@ -62,7 +62,7 @@ def init_argparse() -> argparse.ArgumentParser:
 # Global variables
 BASEURL="https://poc09.blackduck.synopsys.com"
 AUTHURL="%s/api/tokens/authenticate" % (BASEURL)
-api_token="NDc1NGNkNDEtZThlNS00YzZlLTkwZGMtOTU3N2YxN2NiZDk1OmQxMzY4MDVkLTNiZjctNGFlNC04MWI5LTU3YzIwNjc3M2ZiYw=="
+api_token="[REDACTED]"
 today_date = datetime.now()
 date_time = today_date.strftime('%Y-%m-%d %H:%M')
 http_method="GET"
