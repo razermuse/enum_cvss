@@ -12,25 +12,27 @@ This Python script reads a list of components from a file, line by line and then
 ### Usage
 
 enum_cvss_v7.py
-    Find CVSS 2.x and CVSSS 3.x base scores for a given component.
+    Find CVSS 2.x and CVSS 3.x base scores for a given component.
 
 Explanation:
-    This script pulls component data from the BD API and if there are vulnerabilities, will display the CVSS 2.x and CVSS 3.x base scores. Errors are logged to 'enum_cvss.log'. 
+    Pull component data via a list; if there are vulnerabilities: display CVSS 2 and CVSS 3 basescores.
+
+Errors are logged to 'enum_cvss.log'.
 
 Positional arguments:
-    At the moment - none but it does require a list of component names to iterate through.
+    -s       --save      <filename> (optional)
 
 Optional arguments:
     Common Options:
-    -h        --help    Print this help message
-    -i        --info    Print authentication information in addition to CVSS data
-    -q        --quiet   Quiet mode
-    -s        --save    Save output to 'enum_output.csv' (component name, vulnerability ID, CVSS 2 and CVSS 3 scores)
-    -v        --version Version of this program
-    -vv       --verbose Verbosity of output (includes a vulnerability description, CWE, etc) 
+    -h        --help     Display this help message.
+    -i        --info     Display base URL, authentication URL, API/Bearer/CSRF Tokens, and commands selected.
+    -q        --quiet    Quiet mode.
+    -s        --save     Save results. Will use 'enum_output.csv' if a filename isn't given.
+    -vv       --verbose  Display (or save) vulnerability name, severity, description, HREF, and affected projects.
+    -v        --version  Version of this program.
 
 Examples:
-    python3 enum_cvss.py
+    python3 enum_cvss.py -vv -s my_output.csv
 
 #### Example:
 
