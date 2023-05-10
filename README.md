@@ -11,7 +11,7 @@ This Python script reads a list of components from a file, line by line and then
  
 ### Usage
 
-enum_cvss_v5.py
+enum_cvss_v7.py
     Find CVSS 2.x and CVSSS 3.x base scores for a given component.
 
 Explanation:
@@ -34,38 +34,31 @@ Examples:
 
 #### Example:
 
-python3 enum_cvss_v5.py -s
+python3 enum_cvss_v7.py -vv -s
 
 Quiet mode is [DISABLED]
 
-Component name: ESAPI
+Component Name: esapi-java-legacy  Component Version: 2.1.0  Component ID: dc68ccd9-973d-48fa-aa87-f242807112f0
+Medium: 3
 
 Checking for vulnerabilities...
-Vulnerability ID: CVE-2010-3300
-CVSS 2 Base Score: 4.3
-CVSS 3 Base Score: 5.9
+Vulnerability Name: BDSA-2022-1808 (Severity: MEDIUM)
+Description: ESAPI is vulnerable to control-flow-bypass check failure due to an improper default implementation of the validator method `getValidDirectoryPath()`. This could be leveraged by an attacker to perform path traversal attacks that would normally be restricted by the validator.
+CVSS 2 Basescore: 4.6 CVSS 3 Basescore: 7.5
+HREF: https://poc09.blackduck.synopsys.com/api/vulnerabilities/BDSA-2022-1808
+Affected Projects: Ticketbook_AskId_0068902_dev (0.9.1-SNAPSHOT)
 Appending output to: enum_output.csv
 
 Checking for vulnerabilities...
-Vulnerability ID: BDSA-2022-1808
-CVSS 2 Base Score: 4.6
-CVSS 3 Base Score: 7.5
+Vulnerability Name: BDSA-2022-1809 (Severity: MEDIUM)
+Description: ESAPI is vulnerable to cross-site scripting (XSS) due to an improperly defined regular expression within the `antisamy-esapi.xml` configuration file. This could allow an attacker to supply malicious `javascript:` URIs, and steal sensitive information such as authentication tokens and user session cookies.
+CVSS 2 Basescore: 4.3 CVSS 3 Basescore: 6.1
+HREF: https://poc09.blackduck.synopsys.com/api/vulnerabilities/BDSA-2022-1809
+Affected Projects: Ticketbook_AskId_0068902_dev (0.9.1-SNAPSHOT)
 Appending output to: enum_output.csv
 
 Checking for vulnerabilities...
-Vulnerability ID: CVE-2022-24891
-CVSS 2 Base Score: 4.3
-CVSS 3 Base Score: 6.1
-Appending output to: enum_output.csv
-
-Checking for vulnerabilities...
-Vulnerability ID: CVE-2022-23457
-CVSS 2 Base Score: 7.5
-CVSS 3 Base Score: 9.8
-Appending output to: enum_output.csv
-
-Checking for vulnerabilities...
-Vulnerability ID: BDSA-2022-1809
-CVSS 2 Base Score: 4.3
-CVSS 3 Base Score: 6.1
-Appending output to: enum_output.
+Vulnerability Name: CVE-2022-24891 (Severity: MEDIUM)
+Description: ESAPI (The OWASP Enterprise Security API) is a free, open source, web application security control library. Prior to version 2.3.0.0, there is a potential for a cross-site scripting vulnerability in ESAPI caused by a incorrect regular expression for "onsiteURL" in the **antisamy-esapi.xml** configuration file that can cause "javascript:" URLs to fail to be correctly sanitized. This issue is patched in ESAPI 2.3.0.0. As a workaround, manually edit the **antisamy-esapi.xml** configuration files to change the "onsiteURL" regular expression. More information about remediation of the vulnerability, including the workaround, is available in the maintainers' release notes and security bulletin.
+CVSS 2 Basescore: 4.3 CVSS 3 Basescore: 6.1
+HREF: https://poc09.blackduck.synopsys.com/api/vulnerabilities/CVE-2022-24891
